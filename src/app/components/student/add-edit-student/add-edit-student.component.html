@@ -1,0 +1,43 @@
+<div class="form-container">
+    <div class="form-froup row">
+        <label class="label">Ime: <span id="star">*</span></label>
+        <div class="input">
+            <input required type="text" class="form-control" [(ngModel)]="Ime" placeholder="Ime">
+            <br/>
+        </div>
+      
+        <label class="label">Prezime: <span id="star">*</span></label>
+        <div class="input">
+            <input type="text" class="form-control" [(ngModel)]="Prezime" placeholder="Prezime">
+        </div>
+    
+        <label class="label">Br. Indeksa: <span id="star">*</span></label>
+        <div class="input">
+            <input type="text" class="form-control" required [(ngModel)]="IndexNum" placeholder="Br. Indeksa">
+        </div>
+        
+        <label class="label">Godina: <span id="star">*</span></label>
+        <div class="input">
+            <input type="text" class="form-control" [(ngModel)]="Godina" placeholder="Godina">
+        </div>
+        <label class="label">Status: <span id="star">*</span></label>
+        <div class="input">
+            <select class="custom-select" name="Statuses"  [(ngModel)]="Status" required>
+          <option value="" class="text-primary font-weight-bolder">
+            --- Izaberi Status ---
+          </option>
+          <option *ngFor="let status of statuses" [value]="status.Status1">
+            {{status.Status1}}
+          </option>
+        </select>
+        </div>
+    </div>
+    <br/>
+    
+    
+</div>
+
+<button type="submit" class="btn btn-primary float-right addEditBtn" *ngIf="studentData.StudentId ==0 || studentData.StudentId == undefined" [disabled]="!Status && !IndexNum" (click)="addStudent()">Dodaj</button>
+    
+    
+<button type="submit" class="btn btn-primary float-right addEditBtn" *ngIf="studentData.StudentId > 0"  (click)="editStudent()">Izmijeni</button>

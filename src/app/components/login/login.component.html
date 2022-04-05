@@ -1,0 +1,23 @@
+<div class="loginForm">
+    <form [formGroup]="LoginForm" (ngSubmit)="GetToken()">    
+        <div>    
+         <Label>    
+         Korisničko ime:    
+        
+        </Label>   
+        <input type="text" formControlName="UserName">     
+        </div>    
+        <div>    
+        <label>    
+            Šifra:     
+            
+        </label>    
+        <input type="password" formControlName="Password">    
+        </div>    
+        <div>    
+        <button type="submit" [disabled]="!LoginForm.valid" class="btn btn-primary"> Login</button>    
+        </div>    
+    </form> 
+</div>
+
+

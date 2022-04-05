@@ -1,0 +1,16 @@
+
+<div class="course-ditail-container">
+    <div *ngFor="let info of currentCourse" class="course-info">
+        <p id="kurs">Kurs: <strong>{{info.Item1.KursName}}</strong></p>
+     
+
+        <p>Studenti:</p>
+        <ul>
+            <li  *ngFor="let c of info.Item2">
+                {{c.IndexNum}} {{c.Ime}} {{c.Prezime}} 
+            </li>
+            
+        </ul>
+    </div>
+</div>
+<button class="btn btn-primary backToList" (click)="backToList()">Nazad na listu</button>

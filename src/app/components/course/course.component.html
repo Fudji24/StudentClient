@@ -1,0 +1,19 @@
+<button class="btn btn-success addCourse" *ngIf="!ActivateAddEditCourse" (click)="addCourseClick()" type="button" >Dodaj Kurs</button>
+
+
+<div class="course-container"  *ngIf="ActivateAddEditCourse">
+    <div class="add-edit">
+        <app-add [courseData]="courseData" ></app-add>
+        <button class="btn btn-danger closeModal" (click)="CloseCourseModal()">Zatvori</button>
+    </div>
+</div>
+
+<div class="courses">
+    <h6>Kursevi:</h6>
+    <div class="course" *ngFor="let c of courses">
+        <a class="kursName" (click)="showCourseDetails(c.KursId)">{{c.KursName}}</a>
+    </div>
+</div>
+
+
+

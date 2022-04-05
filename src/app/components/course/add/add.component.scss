@@ -1,0 +1,15 @@
+.courseForm{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form-container{
+       width: 80%;
+    }
+    .addBtn{
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+    }
+}
+

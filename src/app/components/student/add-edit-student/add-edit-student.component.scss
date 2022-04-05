@@ -1,0 +1,26 @@
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+
+    .form-froup{
+        width: 60%;
+        label{
+            color: black;
+            #star{
+                color: red;
+                font-weight: bold;
+            }
+        }
+
+    }
+}
+
+.addEditBtn{
+    position: absolute;
+        right: 50px;
+        bottom: 50px;
+        border: 0px;
+}
+

@@ -1,0 +1,35 @@
+.course-ditail-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('./../../../../assets/courseBG.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    .course-info{
+        width: 80%;
+        height: 80%;
+        padding: 5px;
+        background: rgb(255 255 255 / 62%);
+        box-shadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgb(255 255 255 / 32%);
+
+        #kurs{
+            text-align: center;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.backToList{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}

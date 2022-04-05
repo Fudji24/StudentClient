@@ -1,0 +1,41 @@
+<div class="student-container" *ngIf="ActivateAddEditComp">
+  <div class="add-edit" >
+    <app-add-edit-student [studentData]="studentData" ></app-add-edit-student>
+    <button class="btn btn-danger closeModal" (click)="CloseModal()">Zatvori</button>
+  </div>
+</div>
+
+
+<button class="btn btn-success addStudent" *ngIf="!ActivateAddEditComp" (click)="addClick()" type="button" >Dodaj Studenta</button>   
+
+
+
+
+<div class="students-list">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Broj Indeksa</th>
+            <th scope="col">Ime</th>
+            <th scope="col">Prezime</th>
+            <th scope="col">Opcije</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of students">
+            <th scope="row">{{s.IndexNum}}</th>
+            <td>{{s.Ime}}</td>
+            <td>{{s.Prezime}}</td>
+            <td>
+                <a class="btn btn-secondary" (click)="showStudentDetails(s?.StudentId)">Detalji</a>
+                <a class="btn btn-success" (click)="editClick(s)">Izmijeni</a>
+                <a class="btn btn-danger" (click)="deleteSudent(s?.StudentId)">Obrisi</a>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+    
+    
+</div>

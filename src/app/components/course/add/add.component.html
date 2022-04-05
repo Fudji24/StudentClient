@@ -1,0 +1,30 @@
+<div class="courseForm">
+    <div class="form-container">
+        <div class="form-froup row">
+            <label class="label">Naziv Kursa:</label>
+            <div class="input">
+                <input type="text" class="form-control" [(ngModel)]="KursName" placeholder="Kurs...">
+                <br/>
+            </div>
+
+
+            <label *ngFor="let student of students">
+              <input
+                type="checkbox"
+                name="selectedStudents[]"
+                value="{{student.IndexNum}}"
+                
+                (change)="toggleSelection(student, $event)" 
+              > {{student.IndexNum}} {{student.Ime}} {{student.Prezime}}
+            </label>
+
+         
+            
+        </div>
+        <br/>
+        
+        
+    </div>
+    
+    <button class="btn btn-primary addBtn" (click)="addCourse()">Dodaj</button>
+</div>

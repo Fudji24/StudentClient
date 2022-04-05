@@ -1,0 +1,27 @@
+
+<div class="student-ditail-container">
+    <div *ngFor="let info of currentStudent" class="student-info">
+        <div class="info">
+            <h4>Informacije o Studentu</h4>
+            <p>Broj indeksa: <strong>{{info.Item1.IndexNum}}</strong></p>
+            <p>Ime i prezime: <strong>{{info.Item1.Ime}} {{info.Item1.Prezime}}</strong></p>
+            <p>Godina studija: <strong>{{info.Item1.Godina}}</strong></p>
+            <p>Status: <strong>{{info.Item1.Status}}</strong></p>
+        </div>
+        
+        <div class="kurs">
+            <h4>Kursevi:</h4>
+            <ul>
+                <li  *ngFor="let c of info.Item2">
+                    {{c.KursName}}
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<button class="btn btn-primary backToList" (click)="backToList()">Nazad na listu</button>
+
